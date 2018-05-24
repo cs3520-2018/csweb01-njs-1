@@ -206,15 +206,15 @@ module.exports.storeData = async function( data )
 			
 			// getCustomerId() checks if there are no duplicate customers with same email. If checking for duplicates isn't important, then use insert() helper function instead and create document.
 			//let customerId = await getCustomerId( db, data.checkoutInfo.billingInfo );
-			let customerId = await insert( db, "customers", data.checkoutInfo.billingInfo );
+			let customerId = await insert( db, "customers", data.shippingInfo );
 			if ( customerId != null )
 			{
 				let billingDocument = {
 					"customer_id" : customerId,
-					"creditCardNum" : data.checkoutInfo.paymentInfo.ccNumber,
-					"creditCardExpMonth" : data.checkoutInfo.paymentInfo.ccExpMonth,
-					"creditCardExpYear" : data.checkoutInfo.paymentInfo.ccExpYear,
-					"creditCardSecurityNum" : data.checkoutInfo.paymentInfo.ccCVC
+					"creditCardNum" : data.paymentInfo.ccNumber,
+					"creditCardExpMonth" : data.paymentInfo.ccExpMonth,
+					//"creditCardExpYear" : data.checkoutInfo.paymentInfo.ccExpYear,
+					"creditCardSecurityNum" : data.paymentInfo.ccCVC
 				};
 				
 				// Insert billing.
