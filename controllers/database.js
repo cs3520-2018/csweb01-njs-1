@@ -223,11 +223,11 @@ module.exports.storeData = async function( data )
 				{
 					let shippingDocument = {
 						"customer_id" : customerId,
-						"address" : data.checkoutInfo.shippingInfo.address,
-						"address2" : data.checkoutInfo.shippingInfo.address2,
-						"city" : data.checkoutInfo.shippingInfo.city,
-						"state" : data.checkoutInfo.shippingInfo.state,
-						"zip" : data.checkoutInfo.shippingInfo.zip
+						"address" : data.shippingInfo.address,
+						"address2" : data.shippingInfo.address2,
+						"city" : data.shippingInfo.city,
+						"state" : data.shippingInfo.state,
+						"zip" : data.shippingInfo.zip
 					};
 					
 					// Insert shipping.
