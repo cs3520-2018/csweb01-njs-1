@@ -13,6 +13,7 @@ console.log('Within async function');
 		let orders = await databaseController.getAllOrders();
 		response.render( "getAllOrders.ejs", { orders: orders } );
 	})();
+console.log('Left async');
 });
 
 module.exports = router;
