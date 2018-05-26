@@ -6,6 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+console.log('Debug');
 router.use('/project/storeData', require('./project/storeData') );
 console.log('Debug');
 router.use('/project/getAllOrders', require('./project/getAllOrders') ); 
