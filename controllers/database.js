@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 let DB_USER = "csweb01";
 let DB_PASSWORD = "csweb01";
 let DB_NAME = "csweb01";
-let DB_DOMAIN = "cs047085.mlab.com:47085";
+let DB_DOMAIN = "ds047085.mlab.com:47085";
 
 // Helper function of connecting to the database. Returns MongoClient Object.
 async function connect()

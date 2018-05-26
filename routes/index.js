@@ -7,5 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.use('/project/storeData', require('./project/storeData') );
+console.log('Debug');
 router.use('/project/getAllOrders', require('./project/getAllOrders') ); 
 module.exports = router;
