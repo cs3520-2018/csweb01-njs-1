@@ -4,7 +4,7 @@ var router = express.Router();
 let databaseController = require('../../controllers/database.js');
 console.log("Debug 0");
 
-router.post('/project/storeData', function( request, response, next ) 
+router.post('/', function( request, response, next ) 
 {
 console.log("Calling storeData");
 	(async function() {
