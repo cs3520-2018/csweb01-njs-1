@@ -3,13 +3,13 @@ var router = express.Router();
 
 let databaseController = require('../../controllers/database.js');
 
-router.post('/', function( request, response, next ) 
+router.post('/storeData', function( request, response, next ) 
 {
+console.log("Calling storeData");
 	(async function() {
 		
 		let data = request.body; // assumed as JSON object.
 		let success = databaseController.storeData( data );
-console.log("Calling storeData");
 		
 		if ( success )
 			response.status( 200 ).send( "success" );
