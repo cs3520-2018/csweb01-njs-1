@@ -202,6 +202,7 @@ module.exports.storeData = async function( data )
 		try
 		{
 			const db = client.db( DB_NAME );
+            console.log("DB connected");
 			
 			// Store the customer info first. In my case, I use the billing info.
 			
