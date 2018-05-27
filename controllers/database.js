@@ -35,7 +35,7 @@ async function insert( db, collectionName, document )
 
 // getCustomerId() gets the customer in the database, or attempts to create a new customer entry if not present. 
 // Returns the customer's _id on success, or null on failure.
-async function getCustomerId( db, info )
+module.exports.getCustomerId = async function( db, info )
 {
 	/*
 		info is an associative array. It can contain anything you want, as long as all values are strings.
