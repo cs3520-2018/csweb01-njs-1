@@ -35,7 +35,7 @@ async function insert( db, collectionName, document )
 
 // getCustomerId() gets the customer in the database, or attempts to create a new customer entry if not present. 
 // Returns the customer's _id on success, or null on failure.
-module.exports.getCustomerId = async function( db, info )
+async function getCustomerId( db, info )
 {
 	/*
 		info is an associative array. It can contain anything you want, as long as all values are strings.
@@ -111,7 +111,7 @@ module.exports.getAllOrders = async function( request, response )
 			
 			let orders = db.collection( "orders" );
 			
-			let allOrders = await orders.find( {} );
+			let allOrders = await orders.find();
 			ret = allOrders.toArray();
 		}
 		catch ( err )

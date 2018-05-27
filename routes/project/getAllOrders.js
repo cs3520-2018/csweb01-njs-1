@@ -10,7 +10,7 @@ router.get('/', function( request, response, next )
 console.log('Debug');
 	(async function() {
 console.log('Within async function');
-		let orders = await databaseController.getCustomerId();
+		let orders = await databaseController.getAllOrders();
 		response.render( "getAllOrders.ejs", { orders: orders } );
 	})();
 console.log('Left async');
