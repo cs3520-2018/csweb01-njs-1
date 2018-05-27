@@ -123,6 +123,7 @@ module.exports.getAllOrders = async function( request, response )
 	client.close();
 	
 	//console.log( "Connection closed!" );
+    console.log( ret );
 	
 	return ret;
 };
