@@ -25,7 +25,7 @@
 				<li>Order total: <%=order_total %></li>
 				<li>Products:</li>
 				<ul>
-                <% if (product_vector !== null) { %>
+				<% if (typeof product_vector != 'undefined') { %>
 				  <% product_vector.forEach( function( p ) { %>
 					<%
 					let id = p.id;
@@ -36,7 +36,12 @@
 						<li>Quantity: <%=quantity %></li>
 					</ul>
 				  <%}); %>
-				<%}; %>
+				<%} else { %>
+					<li>Id: UNDEFINED</li>
+					<ul>
+						<li>Quantity: UNDEFINED</li>
+					</ul>
+				<%}; $>
 				</ul>
 			</ul>
 			<br/>
