@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 let databaseController = require('../../controllers/database.js');
+console.log("Debug 0");
 
 router.post('/project/storeData', function( request, response, next ) 
 {
