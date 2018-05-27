@@ -210,6 +210,7 @@ module.exports.storeData = async function( data )
 			let customerId = await insert( db, "customers", data.checkoutInfo.billingInfo );
 			if ( customerId != null )
 			{
+            console.log("if customerID != NULL");
 				let billingDocument = {
 					"customer_id" : customerId,
 					"creditCardNum" : data.paymentInfo.ccNumber,
