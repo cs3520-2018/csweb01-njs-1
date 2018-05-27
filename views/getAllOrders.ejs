@@ -25,7 +25,8 @@
 				<li>Order total: <%=order_total %></li>
 				<li>Products:</li>
 				<ul>
-				<% product_vector.forEach( function( p ) { %>
+                <% if (product_vector !== null) { %>
+				  <% product_vector.forEach( function( p ) { %>
 					<%
 					let id = p.id;
 					let quantity = p.quantity;
@@ -34,7 +35,8 @@
 					<ul>
 						<li>Quantity: <%=quantity %></li>
 					</ul>
-				<%}); %>
+				  <%}); %>
+				<%}; %>
 				</ul>
 			</ul>
 			<br/>
