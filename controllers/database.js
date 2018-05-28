@@ -210,7 +210,7 @@ module.exports.storeData = async function( data )
 			// getCustomerId() checks if there are no duplicate customers with same email. If checking for duplicates isn't important, then use insert() helper function instead and create document.
 			//let customerId = await getCustomerId( db, data.checkoutInfo.billingInfo );
 console.log("After DB connects, check for customer");
-console.log(data.checkoutInfo.billingInfo);
+console.log(data.checkoutInfo);
 			let customerId = await insert( db, "customers", data.checkoutInfo );
 console.log("Checking customerId != nul");
 			if ( customerId != null )
