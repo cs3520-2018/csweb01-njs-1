@@ -80,7 +80,7 @@ async function getCustomerId( db, info )
 		else
 		{
 			console.log( "Customer with email " + info[ "email" ] + " found!" );
-			//ret = queryResult[ "_id" ]; // _id is always included in result of query, regardless if specified to be included or not.
+			ret = queryResult[ "_id" ]; // _id is always included in result of query, regardless if specified to be included or not.
 		}
 	}
 	catch ( err )
@@ -122,7 +122,8 @@ module.exports.getAllOrders = async function( request, response )
 	
 	client.close();
 	
-	//console.log( "Connection closed!" );
+	console.log( "Connection closed!" );
+    console.log("Getting all orders return val: ");
     console.log( ret );
 	
 	return ret;
@@ -208,8 +209,10 @@ module.exports.storeData = async function( data )
 			
 			// getCustomerId() checks if there are no duplicate customers with same email. If checking for duplicates isn't important, then use insert() helper function instead and create document.
 			//let customerId = await getCustomerId( db, data.checkoutInfo.billingInfo );
+console.log("After DB connects, check for customer");
 			let customerId = await insert( db, "customers", data.checkoutInfo.billingInfo );
 			if ( customerId != null )
+console.log("Checking customerId != null);
 			{
             console.log("if customerID != NULL");
 				let billingDocument = {
