@@ -80,7 +80,7 @@ async function getCustomerId( db, info )
 		else
 		{
 			console.log( "Customer with email " + info[ "email" ] + " found!" );
-			ret = queryResult[ "_id" ]; // _id is always included in result of query, regardless if specified to be included or not.
+			//ret = queryResult[ "_id" ]; // _id is always included in result of query, regardless if specified to be included or not.
 		}
 	}
 	catch ( err )
