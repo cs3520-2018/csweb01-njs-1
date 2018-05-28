@@ -227,7 +227,7 @@ module.exports.storeData = async function( data )
 					let shippingDocument = {
 						"customer_id" : customerId,
 						"address" : data.checkoutInfo.shippingInfo.address,
-						"address2" : data.checkoutInfo.shippingInfo.address2,
+						//"address2" : data.checkoutInfo.shippingInfo.address2,
 						"city" : data.checkoutInfo.shippingInfo.city,
 						"state" : data.checkoutInfo.shippingInfo.state,
 						"zip" : data.checkoutInfo.shippingInfo.zip
