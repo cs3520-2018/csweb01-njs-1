@@ -35,8 +35,6 @@ async function insert( db, collectionName, document )
 
 // getCustomerId() gets the customer in the database, or attempts to create a new customer entry if not present. 
 // Returns the customer's _id on success, or null on failure.
-console.log("Printing info");
-console.log(info);
 async function getCustomerId( db, info )
 {
 	/*
