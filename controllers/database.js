@@ -214,10 +214,10 @@ module.exports.storeData = async function( data )
             console.log("if customerID != NULL");
 				let billingDocument = {
 					"customer_id" : customerId,
-					"creditCardNum" : data.paymentInfo.ccNumber,
-					"creditCardExpMonth" : data.paymentInfo.ccExpMonth,
+					"creditCardNum" : data.checkoutInfopaymentInfo.ccNumber,
+					"creditCardExpMonth" : data.checkoutInfopaymentInfo.ccExpMonth,
 					//"creditCardExpYear" : data.checkoutInfo.paymentInfo.ccExpYear,
-					"creditCardSecurityNum" : data.paymentInfo.ccCVC
+					"creditCardSecurityNum" : data.checkoutInfo.paymentInfo.ccCVC
 				};
 				
 				// Insert billing.
@@ -226,11 +226,11 @@ module.exports.storeData = async function( data )
 				{
 					let shippingDocument = {
 						"customer_id" : customerId,
-						"address" : data.shippingInfo.address,
-						"address2" : data.shippingInfo.address2,
-						"city" : data.shippingInfo.city,
-						"state" : data.shippingInfo.state,
-						"zip" : data.shippingInfo.zip
+						"address" : data.checkoutInfo.shippingInfo.address,
+						"address2" : data.checkoutInfo.shippingInfo.address2,
+						"city" : data.checkoutInfo.shippingInfo.city,
+						"state" : data.checkoutInfo.shippingInfo.state,
+						"zip" : data.checkoutInfo.shippingInfo.zip
 					};
 					
 					// Insert shipping.
