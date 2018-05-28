@@ -212,7 +212,7 @@ module.exports.storeData = async function( data )
 console.log("After DB connects, check for customer");
 			let customerId = await insert( db, "customers", data.checkoutInfo.billingInfo );
 			if ( customerId != null )
-console.log("Checking customerId != null);
+console.log("Checking customerId != null");
 			{
             console.log("if customerID != NULL");
 				let billingDocument = {
